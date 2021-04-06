@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROMDIR=/tmp/rom
-MANIFEST=https://github.com/unnamed877/manifest.git
+MANIFEST=https://github.com/Project-Fluid/manifest.git
 BRANCH=fluid-11
 
 mkdir -p "$ROMDIR"
@@ -9,8 +9,8 @@ cd "$ROMDIR"
 
 # Repo init command
 repo init --no-repo-verify --depth=1 -u "$MANIFEST" -b "$BRANCH" -g default,-device,-mips,-darwin,-notdefault
-git config --global user.name unnamed877
-git config --global user.email unnamed877@protonmail.com
+git config --global user.name Shalord-X
+git config --global user.email shalordx@protonmail.ch
 
 # Sync local_manifests
 git clone https://github.com/awikawok1/local_manifests --depth 1 -b certus/11 .repo/local_manifests
